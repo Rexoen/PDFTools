@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dsp_Dialog</class>
+ <widget class="QDialog" name="dsp_Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>329</width>
+    <height>110</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>手动双面打印</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="former_button">
+       <property name="text">
+        <string>先</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="latter_button">
+       <property name="text">
+        <string>后</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="hint_label">
+     <property name="text">
+      <string>请按照先后顺序进行操作，正面打完后请将
+出仓纸反着放回打印机入纸口进行反面打印</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>former_button</sender>
+   <signal>clicked()</signal>
+   <receiver>former_button</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>88</x>
+     <y>37</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>latter_button</sender>
+   <signal>clicked()</signal>
+   <receiver>latter_button</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>32</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
